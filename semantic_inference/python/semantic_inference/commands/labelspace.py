@@ -101,6 +101,8 @@ def cli():
     pass
 
 
+# python3 labelspace.py /home/mhc/catkin_ws/src/semantic_inference/semantic_inference/resources/ade20k_categories.csv /home/mhc/catkin_ws/src/semantic_inference/semantic_inference/config/label_groupings/ade20k_mp3d.yaml
+
 @click.command()
 @click.argument("labelspace", type=click.Path(exists=True))
 @click.argument("grouping", type=click.Path(exists=True))
@@ -131,3 +133,6 @@ def compare(labelspace, grouping, name_index, label_index):
     _show_labels(groups, catmap)
     print("")
     _show_matches(groups, catmap, group_matches, cat_matches)
+
+if __name__ == "__main__":
+    compare()

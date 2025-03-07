@@ -17,12 +17,6 @@
     <arg name="max_image_queue_size" default="1" doc="Max number of images to store"/>
     <arg name="min_separation_s" default="0.0" doc="Enforced separation between input images"/>
     <arg name="rotation_type" default="none" doc="Input camera rotation"/>
-    <!-- segmentation model options. Make sure you have one downloaded -->
-    <!--<arg name="model_name" default="mobilenetv2_360_640"/>-->
-    <!--<arg name="model_name" default="hrnetv2_360_640_v12"/>-->
-    <!-- <arg name="model_name" default="efficientvit_seg_l2"/> -->
-    <!-- <arg name="model_name" default="ade20k-hrnetv2-c1"/> -->
-    <!-- <arg name="model_name" default="ade20k-mobilenetv2dilated-c1_deepsup"/> -->
     <arg name="model_name" default="ade20k-efficientvit_seg_l2" doc="Model name to use"/>
 
     <!-- Colormap and label grouping -->
@@ -71,11 +65,8 @@
     </group>
 
     <!-- For online running -->
-    <!-- <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/> -->
     <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/>
-    <!-- <remap from="semantic_inference/color/image_raw_new" to="/semantic_inference/color/image_raw"/> -->
     <!-- <include file="$(find semantic_inference_ros)/launch/semantic_inference.launch"/> -->
-    <!-- Running camera decompression file -->
-    <include file="$(find semantic_inference_ros)/launch/image_uncompress.launch" />
+    <node name="image_resizer_node" pkg="semantic_inference_ros" type="reshape.py" output="screen" />
 
 </launch>
