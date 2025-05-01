@@ -47,7 +47,8 @@
               output="$(eval 'screen' if verbose else 'log')"
               required="true">
             <rosparam command="load" file="$(find semantic_inference)/config/models/$(arg model_name).yaml"/>
-            <rosparam command="load" file="$(find semantic_inference)/config/label_groupings/$(arg labelspace_name).yaml" ns="output/recolor"/>
+            <!-- <rosparam command="load" file="$(find semantic_inference)/config/label_groupings/$(arg labelspace_name).yaml" ns="output/recolor"/> -->
+            <rosparam command="load" file="$(find semantic_inference)/config/label_groupings/ade20k_identity_grouping.yaml" ns="output/recolor"/>
             <param name="segmenter/model/model_file" value="$(find semantic_inference)/models/$(arg model_name).onnx"/>
             <param name="segmenter/model/engine_file" value="$(find semantic_inference)/engines/$(arg model_name).trt"/>
             <param name="segmenter/model/force_rebuild" value="$(arg force_rebuild)"/>
@@ -59,23 +60,23 @@
     </group>
 
     <!-- Reampping for pre-recorded labels -->
-    <group if="$(arg use_prerecorded_semantics)">
+    <!-- <group if="$(arg use_prerecorded_semantics)">
         <node pkg="nodelet" type="nodelet" name="semantic_inference"
-              args="load semantic_inference/recolor $(arg nodelet_manager) --no-bond"
+              args="load semantic_inference/recolor $(arg nodelet_manager) no-bond"
               output="$(eval 'screen' if verbose else 'log')"
               required="true">
             <rosparam command="load" file="$(find semantic_inference)/config/label_groupings/$(arg labelspace_name).yaml" ns="output/recolor"/>
             <param name="worker/max_queue_size" value="$(arg max_image_queue_size)"/>
             <param name="worker/image_separation_s" value="$(arg min_separation_s)"/>
         </node>
-    </group>
+    </group> -->
 
     <!-- For online running -->
     <!-- <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/> -->
-    <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/>
+    <!-- <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/> -->
     <!-- <remap from="semantic_inference/color/image_raw_new" to="/semantic_inference/color/image_raw"/> -->
     <!-- <include file="$(find semantic_inference_ros)/launch/semantic_inference.launch"/> -->
     <!-- Running camera decompression file -->
-    <include file="$(find semantic_inference_ros)/launch/image_uncompress.launch" />
+    <!-- <include file="$(find semantic_inference_ros)/launch/image_uncompress.launch" /> -->
 
 </launch>

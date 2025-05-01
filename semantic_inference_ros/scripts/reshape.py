@@ -18,22 +18,12 @@ def image_callback(msg):
     global time_msg, last_time, seq
     time_msg = msg.header.stamp
     seq = msg.header.seq
-    # print("seg is:", seq)
-    # current_time = time.time()
-    # if current_time - last_time < (1.0 / image_rate):
-    #     return  # Skip processing if we are not at the right interval
     
     try:
         # Convert the ROS Image message to OpenCV format (BGR)
         bridge = CvBridge()
         cv_image = bridge.imgmsg_to_cv2(msg, "bgr8")
 
-        # flip the image
-        # flip_image = cv2.flip(cv2.flip(cv_image, 0), -1)
-
-        # Resize the image to 720x720
-        # Doing this to run the model
-        # resized_image = cv2.resize(cv_image, (720, 720)) #Don't need this
         resized_image = cv_image
         if not use_webcamera:
             rotated_image = cv2.transpose(resized_image)
@@ -70,31 +60,16 @@ def semantic_image_callback(msg):
     try:
         # Convert the ROS Image message to OpenCV format (BGR)
         bridge = CvBridge()
-        cv_image = bridge.imgmsg_to_cv2(msg, "16SC1")
+        encoding = msg.encoding
+        se_image = bridge.imgmsg_to_cv2(msg, encoding)
 
-        print("Val: ", cv_image[315, 291], cv_image[200, 335], cv_image[516, 144], cv_image[371, 288])
-
-        lamp = np.where(cv_image == 36)
-        rug = np.where(cv_image == 28)
-        wall = np.where(cv_image == 0)
-
-        print("lamp {0} rug {1} wall {2}".format(lamp, rug, wall))
-        # Resize the image to 720x1280
-        # resized_image = cv2.resize(cv_image, (720, 1280))
-        resized_image = cv_image
+        resized_image = se_image
 
         if not use_webcamera:
             rotated_image = cv2.transpose(resized_image)
             flip_image = cv2.flip(rotated_image, flipCode=0)
             resized_image = flip_image
 
-        # normalized_image = cv2.normalize(resized_image, None, 0, 255, cv2.NORM_MINMAX)
-
-        # Convert to an 8-bit single channel (8UC1) format
-        # final_image = cv_image.astype('uint8')
-
-        # print(np.unique(final_image))
-        # cv_image_16uc1 = resized_image + 32768  # Add 32768 to shift the negative values
         uint16_image = resized_image.astype(np.uint16)
 
         # Convert the final image back to a ROS message

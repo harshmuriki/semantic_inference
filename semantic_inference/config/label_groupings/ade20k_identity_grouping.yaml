@@ -1,0 +1,303 @@
+name: ade20k_identity_grouping
+offset: 0
+groups:
+  - name: wall
+    labels: [0]
+  - name: building
+    labels: [1]
+  - name: sky
+    labels: [2]
+  - name: floor
+    labels: [3]
+  - name: tree
+    labels: [4]
+  - name: ceiling
+    labels: [5]
+  - name: road
+    labels: [6]
+  - name: bed
+    labels: [7]
+  - name: windowpane
+    labels: [8]
+  - name: grass
+    labels: [9]
+  - name: cabinet
+    labels: [10]
+  - name: sidewalk
+    labels: [11]
+  - name: person
+    labels: [12]
+  - name: earth
+    labels: [13]
+  - name: door
+    labels: [14]
+  - name: table
+    labels: [15]
+  - name: mountain
+    labels: [16]
+  - name: plant
+    labels: [17]
+  - name: curtain
+    labels: [18]
+  - name: chair
+    labels: [19]
+  - name: car
+    labels: [20]
+  - name: water
+    labels: [21]
+  - name: painting
+    labels: [22]
+  - name: sofa
+    labels: [23]
+  - name: shelf
+    labels: [24]
+  - name: house
+    labels: [25]
+  - name: sea
+    labels: [26]
+  - name: mirror
+    labels: [27]
+  - name: rug
+    labels: [28]
+  - name: field
+    labels: [29]
+  - name: armchair
+    labels: [30]
+  - name: seat
+    labels: [31]
+  - name: fence
+    labels: [32]
+  - name: desk
+    labels: [33]
+  - name: rock
+    labels: [34]
+  - name: wardrobe
+    labels: [35]
+  - name: lamp
+    labels: [36]
+  - name: bathtub
+    labels: [37]
+  - name: railing
+    labels: [38]
+  - name: cushion
+    labels: [39]
+  - name: base
+    labels: [40]
+  - name: box
+    labels: [41]
+  - name: column
+    labels: [42]
+  - name: signboard
+    labels: [43]
+  - name: chest of drawers
+    labels: [44]
+  - name: counter
+    labels: [45]
+  - name: sand
+    labels: [46]
+  - name: sink
+    labels: [47]
+  - name: skyscraper
+    labels: [48]
+  - name: fireplace
+    labels: [49]
+  - name: refrigerator
+    labels: [50]
+  - name: grandstand
+    labels: [51]
+  - name: path
+    labels: [52]
+  - name: stairs
+    labels: [53]
+  - name: runway
+    labels: [54]
+  - name: case
+    labels: [55]
+  - name: pool table
+    labels: [56]
+  - name: pillow
+    labels: [57]
+  - name: screen door
+    labels: [58]
+  - name: stairway
+    labels: [59]
+  - name: river
+    labels: [60]
+  - name: bridge
+    labels: [61]
+  - name: bookcase
+    labels: [62]
+  - name: blind
+    labels: [63]
+  - name: coffee table
+    labels: [64]
+  - name: toilet
+    labels: [65]
+  - name: flower
+    labels: [66]
+  - name: book
+    labels: [67]
+  - name: hill
+    labels: [68]
+  - name: bench
+    labels: [69]
+  - name: countertop
+    labels: [70]
+  - name: stove
+    labels: [71]
+  - name: palm
+    labels: [72]
+  - name: kitchen island
+    labels: [73]
+  - name: computer
+    labels: [74]
+  - name: swivel chair
+    labels: [75]
+  - name: boat
+    labels: [76]
+  - name: bar
+    labels: [77]
+  - name: arcade machine
+    labels: [78]
+  - name: hovel
+    labels: [79]
+  - name: bus
+    labels: [80]
+  - name: towel
+    labels: [81]
+  - name: light
+    labels: [82]
+  - name: truck
+    labels: [83]
+  - name: tower
+    labels: [84]
+  - name: chandelier
+    labels: [85]
+  - name: awning
+    labels: [86]
+  - name: streetlight
+    labels: [87]
+  - name: booth
+    labels: [88]
+  - name: television receiver
+    labels: [89]
+  - name: airplane
+    labels: [90]
+  - name: dirt track
+    labels: [91]
+  - name: appletree
+    labels: [92]
+  - name: telephone box
+    labels: [93]
+  - name: microwave
+    labels: [94]
+  - name: pot
+    labels: [95]
+  - name: animal
+    labels: [96]
+  - name: bicycle
+    labels: [97]
+  - name: lake
+    labels: [98]
+  - name: dishwasher
+    labels: [99]
+  - name: screen
+    labels: [100]
+  - name: blanket
+    labels: [101]
+  - name: sculpture
+    labels: [102]
+  - name: hood
+    labels: [103]
+  - name: sconce
+    labels: [104]
+  - name: vase
+    labels: [105]
+  - name: traffic light
+    labels: [106]
+  - name: tray
+    labels: [107]
+  - name: ashcan
+    labels: [108]
+  - name: fan
+    labels: [109]
+  - name: pier
+    labels: [110]
+  - name: crt screen
+    labels: [111]
+  - name: plate
+    labels: [112]
+  - name: monitor
+    labels: [113]
+  - name: bulletin board
+    labels: [114]
+  - name: shower
+    labels: [115]
+  - name: radiator
+    labels: [116]
+  - name: glass
+    labels: [117]
+  - name: clock
+    labels: [118]
+  - name: flag
+    labels: [119]
+  - name: plaything
+    labels: [120]
+  - name: planter
+    labels: [121]
+  - name: computer box
+    labels: [122]
+  - name: mailbox
+    labels: [123]
+  - name: pole
+    labels: [124]
+  - name: bannister
+    labels: [125]
+  - name: escalator
+    labels: [126]
+  - name: ottoman
+    labels: [127]
+  - name: bottle
+    labels: [128]
+  - name: buffet
+    labels: [129]
+  - name: poster
+    labels: [130]
+  - name: stage
+    labels: [131]
+  - name: van
+    labels: [132]
+  - name: ship
+    labels: [133]
+  - name: fountain
+    labels: [134]
+  - name: conveyor belt
+    labels: [135]
+  - name: canopy
+    labels: [136]
+  - name: washer
+    labels: [137]
+  - name: playpen
+    labels: [138]
+  - name: swimming pool
+    labels: [139]
+  - name: stool
+    labels: [140]
+  - name: barrel
+    labels: [141]
+  - name: basket
+    labels: [142]
+  - name: waterfall
+    labels: [143]
+  - name: tent
+    labels: [144]
+  - name: bag
+    labels: [145]
+  - name: minibike
+    labels: [146]
+  - name: cradle
+    labels: [147]
+  - name: oven
+    labels: [148]
+  - name: ball
+    labels: [149]
