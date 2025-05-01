@@ -73,10 +73,8 @@
 
     <!-- For online running -->
     <!-- <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/> -->
-    <!-- <remap from="camera/color/image_raw" to="/semantic_inference/color/image_raw"/> -->
     <!-- <remap from="semantic_inference/color/image_raw_new" to="/semantic_inference/color/image_raw"/> -->
-    <!-- <include file="$(find semantic_inference_ros)/launch/semantic_inference.launch"/> -->
     <!-- Running camera decompression file -->
-    <!-- <include file="$(find semantic_inference_ros)/launch/image_uncompress.launch" /> -->
+    <include file="$(find semantic_inference_ros)/launch/image_uncompress.launch" />
 
 </launch>
